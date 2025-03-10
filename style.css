@@ -1,0 +1,131 @@
+/* 🌈 Animated Background */
+body {
+    background: linear-gradient(45deg, #ff5733, #ffbd33, #33ff57, #3357ff, #ff33a1, #8d33ff);
+    background-size: 300% 300%;
+    animation: colorAnimation 6s infinite alternate;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animate background colors */
+@keyframes colorAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 🎉 Confetti Animation */
+.confetti {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% { transform: translateY(0px); opacity: 1; }
+    100% { transform: translateY(200px); opacity: 0; }
+}
+
+/* 🖼️ Holi Modal Popup */
+.modal-content {
+    background: #ffffff;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+}
+
+/* 🎨 Animated Popup Text */
+.popup-text {
+    font-size: 22px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff5733, #ffbd33, #33ff57, #3357ff, #ff33a1, #8d33ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeIn 2s infinite alternate;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0.6; }
+    100% { opacity: 1; }
+}
+
+/* 🏢 Company Logo */
+.company-logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* 🎤 Wish Form */
+#wishForm input,
+#wishForm textarea {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+#submitWish {
+    background-color: #28a745;
+    color: white;
+}
+
+/* 📌 Footer Section */
+.footer {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* 🏢 Company Name */
+.company-name {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* 📲 Social Media Cards */
+.social-card {
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.social-card:hover {
+    transform: scale(1.1);
+}
+
+.social-card img {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+}
+
+.social-card p {
+    color: white;
+    font-size: 12px;
+    margin: 0;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    .footer .col-4 {
+        text-align: center !important;
+    }
+    .company-name {
+        font-size: 12px;
+    }
+}
